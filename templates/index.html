@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio/Video to Text</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="static/header_logo.jpg" alt="Grenouille Engineering Logo" style="width:60%; height:auto;">
+            </div>
+            <div id="app"></div>
+        </nav>
+    </header>
+    <div class="side-bar">
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="/"> > meetings</a>
+              <a href="/clock"> > neon clock</a>
+              <a href=""> > site</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <h1>会議要約</h1>
+        <form id="upload-form">
+            <input type="file" name="file" accept="audio/*,video/*">
+            <input type="button" value="Upload" onclick="uploadFile()">
+        </form>
+        <div id="result"></div>
+      </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+
+</body>
+
+</html>
